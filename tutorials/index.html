@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="../bootstrap/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../custom/banner.css" rel="stylesheet" type="text/css">
+    <link href="../custom/conf.css" rel="stylesheet" type="text/css">
+    <title>Middleware 2014</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../">Middleware 2014</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="navbar-nav nav">
+            <li>
+              <a href="../">Home</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Calls
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../calls/papers/">Call for papers</a>
+                </li>
+                <li>
+                  <a href="../calls/industry/">Call for industry short papers</a>
+                </li>
+                <li>
+                  <a href="../calls/workshops/">Call for workshop proposals</a>
+                </li>
+                <li>
+                  <a href="../calls/tutorials/">Call for tutorials</a>
+                </li>
+                <li>
+                  <a href="../calls/demos/">Call for demos and posters</a>
+                </li>
+                <li>
+                  <a href="../calls/doctoral/">Call for doctoral symposium papers</a>
+                </li>
+                <li>
+                  <a href="../calls/instructions/">Instructions to authors</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Committees
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../committees/organization/">Organization committee</a>
+                </li>
+                <li>
+                  <a href="../committees/program/">Program committee</a>
+                </li>
+                <li>
+                  <a href="../committees/industry">Industrial track program committee</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../workshops/">Workshops</a>
+            </li>
+            <li class="active">
+              <a href="./">Tutorials</a>
+            </li>
+            <li>
+              <a href="../registration/">Registration</a>
+            </li>
+            <li>
+              <a href="../grants/">Grants</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Program
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../program/program/">Program</a>
+                </li>
+                <li class="divider">
+                <li>
+                  <a href="../program/keynotes/">Keynotes</a>
+                </li>
+                <li>
+                  <a href="../program/posters/">Posters / Demos</a>
+                </li>
+                <li>
+                  <a href="../program/doctoral/">Doctoral Symposium</a>
+                </li>
+                <li class="divider">
+                <li>
+                  <a href="../program/accepted/">Accepted papers</a>
+                  <a href="../program/awards/">Awards</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Venue
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../venue/location/">Conference location</a>
+                </li>
+                <li>
+                  <a href="../venue/accommodation/">Accommodation</a>
+                </li>
+                <li>
+                  <a href="../venue/visa/">Visa</a>
+                </li>
+                <li class="divider">
+                <li>
+                  <a href="../gallery/">Pictures</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <img alt="Bordeaux, place de la bourse" class="img-rounded" height="210px" src="../img/banner_middleware.png">
+            </div>
+            <div class="col-lg-9">
+              <h1 id="tutorials">Tutorials</h1>
+              
+              <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h2 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#tuto1"><span class="glyphicon glyphicon-chevron-right"></span> Coccinelle for the Working Programmer</a></h2>
+                  </div>
+                  <div id="tuto1" class="panel-collapse collapse">
+                    <div class="panel-body">
+              
+                      <h3 id="abstract">Abstract</h3>
+              
+                      <p>Infrastructure software, such as operating systems and middleware, is
+              large, diverse, and fast evolving, to meet changing needs in terms of
+              hardware support, performance, and security.  In practice, meeting these
+              needs can involve repetitive code changes, and can introduce bugs, either
+              due to inattention or due to misunderstanding of evolving interfaces.
+              Some potentially valuable changes may even be considered to be to
+              expensive or too risky to implement.  To reduce the cost and risk of
+              making pervasive code changes, we have developed the Coccinelle program
+              matching and transformation tool for C code.  Coccinelle makes it possible
+              to automate pervasive source code evolutions and common bug finding tasks,
+              via a patch-like notation that is accessible to C code developers.
+              Coccinelle is widely used in the Linux kernel developer community and in
+              the development of other open source projects.</p>
+              
+                      <p>This interactive tutorial will give an overview of Coccinelle.  A number
+              of real examples from the Linux kernel will be presented.</p>
+              
+                      <h3 id="bio">Bio</h3>
+              
+                      <p><img src="../img/lawall.jpg" alt="Julia Lawall" class="img-thumbnail pull-left">
+              <a href="http://pagesperso-systeme.lip6.fr/Julia.Lawall/">Julia Lawall</a> is a Senior Researcher at Inria Paris-Rocquencourt.  Her
+              research interests are in the area of improving the quality of
+              infrastructure software, using a variety of approaches including program
+              analysis, program transformation, and the design of domain-specific
+              languages.  She is the main developer of the tool Coccinelle for program
+              matching and transformation in C code.  Over 1200 patches based on her
+              research have been accepted into the Linux kernel.</p>
+              
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h2 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#tuto2"><span class="glyphicon glyphicon-chevron-right"></span> Tackling Large Scale Event Variety in the Internet of Things</a></h2>
+                  </div>
+                  <div id="tuto2" class="panel-collapse collapse">
+                    <div class="panel-body">
+              
+                      <h3 id="abstract-1">Abstract</h3>
+              
+                      <p>This tutorial addresses the challenges for middleware to process events in large scale environments such as the Internet of Things (IoT). Traditional event-based middleware follows an interaction model based on three decoupling dimensions: space, time, and synchronization. However, event producers and consumers are tightly coupled by event semantics: types, attributes, and values. This limits scalability in heterogeneous environments due to difficulties in establishing semantic agreements. The tutorial will motivate and explore this problem within the context of a Smart City IoT deployment.</p>
+              
+                      <p>The tutorial grounds the discussion in the fundamental principles for information exchange between systems and presents a review of computational paradigms and discusses different approaches to the problem. It examines the advantages and disadvantages of each approach and concludes with discussion on how to build working software for heterongeous IoT environments.</p>
+              
+                      <h3 id="bio-1">Bio</h3>
+              
+                      <h4 id="souleiman-hasan">Souleiman Hasan</h4>
+              
+                      <p><img src="../img/hasan.jpg" alt="Souleiman Hasan" class="img-thumbnail pull-left">
+              <a href="http://www.souleimanhasan.org/">Souleiman Hasan</a> is a PhD researcher at the Insight Centre for Data Analytics @ NUI Galway. His research tackles the problem of semantic coupling in event based systems and its effect on scalability in large scale heterogeneous environments such as the Internet of Things. He investigates the approach to the problem in the smart cities, power management, and water management domains and has worked in many research projects including DERI Energy, SENSE, and Waternomics. Souleiman had completed a Bachelor’s degree in Information Technology Engineering, majoring in Software Engineering and Information Systems, at Damascus University, Syria. He has been a teacher assistant for several modules and coached the Damascus University team for the ACM Arab and North Africa Collegiate Programming Contest throughout 2007, 2008, and 2009.</p>
+              
+                      <h4 id="dr-edward-curry">Dr. Edward Curry</h4>
+              
+                      <p><img src="../img/curry.jpg" alt="Edward Curry" class="img-thumbnail pull-left">
+              <a href="www.edwardcurry.org">Edward Curry</a> is a Research Scientist Insight Centre for Data Analytics at NUI Galway. His research projects include studies of sustainable IT, energy intelligence, semantic information management, Event based systems, and collaborative data management. Edward has worked extensively with industry and government advising on the adoption patterns, practicalities, and benefits of new technologies.</p>
+              
+                      <p>Edward has published over 90 scientific articles in journal, books, and international conferences. He has given invited talks at Berkeley, Stanford, and MIT. In 2010 he was a guest speaker at the MIT Sloan CIO Symposium to an audience of 600+ CIOs and senior IT executives. He currently participates in a project for the European Commission to define a research strategy for the Big Data economy within Europe. He has a PhD from the National University of Ireland, Galway (www.nuigalway.ie) and serves as an Adjunct Lecturer within the University.</p>
+              
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h2 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#tuto3"><span class="glyphicon glyphicon-chevron-right"></span> Green Big Data Processing using Hadoop: An introductory</a></h2>
+                  </div>
+                  <div id="tuto3" class="panel-collapse collapse">
+                    <div class="panel-body">
+              
+                      <h3 id="abstract-2">Abstract</h3>
+              
+                      <p>Data volumes are ever growing, for a large application spectrum going from traditional database applications, scientific simulations to emerging applications including Web 2.0 and online social networks. To cope with this added weight of Big Data, we have recently witnessed a paradigm shift in the way data is processed through the MapReduce model. First promoted by Google, MapReduce has become, due to the popularity of its open-source implementation Hadoop, the de facto programming paradigm for Big Data processing in large-scale data centers and clouds. Yet, to meet the ever-growing size of Big Data, Hadoop has been recently deployed on large-scale data centers equipped with thousands of servers that are energy hungry. This results in a tremendous increase in the energy consumed to operate these large-scale data centers and ends up with not only high money bills but also high carbon emission. The goal of this tutorial is to serve as a first step towards not only exploring the Hadoop MapReduce engine but also provide a deep insight into the challenges for making Big Data greener and discuss the main approaches developed in the literature.</p>
+              
+                      <h3 id="bio-2">Bio</h3>
+              
+                      <h4 id="anne-ccile-orgerie">Anne-Cécile Orgerie</h4>
+              
+                      <p><img src="../img/orgerie.jpg" alt="Anne-Cécile Orgerie" class="img-thumbnail pull-left">
+              <a href="http://people.irisa.fr/Anne-Cecile.Orgerie/">Anne-Cécile Orgerie</a> is a tenured research scientist at CNRS. She is working in the Myriads team at IRISA in Rennes, France. She received her PhD. degree in Computer Science from Ecole Normale Superieure de Lyon (France) in September 2011. Her PhD. thesis, entitled An energy-efficient reservation framework for large-scale distributed systems, was awarded the PhD thesis prize from the French chapter of ACM SIGOPS (ASF). Her research interests focus on energy efficiency, large-scale distributed systems and telecommunication networks from both practical and theoretical perspectives.</p>
+              
+                      <h4 id="shadi-ibrahim">Shadi Ibrahim</h4>
+              
+                      <p><img src="../img/ibrahim.jpg" alt="Shadi Ibrahim" class="img-thumbnail pull-left">
+              <a href="http://www.irisa.fr/kerdata/doku.php?id=people:shadi.ibrahim">Shadi Ibrahim</a> is a permanent Inria research scientist within the KerData research team. He obtained his Ph.D. in Computer Science from Huazhong University of Science and Technology in Wuhan of China in 2011. His research interests are in cloud computing, big data management, data-intensive computing, virtualization technology, and file and storage systems. He has published several research papers in recognized big data and cloud computing research journals and conferences, among which, several papers on optimizing and improving Hadoop MapReduce performance in the cloud and one book chapter on MapReduce framework.</p>
+              
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h2 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#tuto4"><span class="glyphicon glyphicon-chevron-right"></span> Designing resource-aware distributed system based on system level containers</a></h2>
+                  </div>
+                  <div id="tuto4" class="panel-collapse collapse">
+                    <div class="panel-body">
+              
+                      <h3 id="abstract-3">Abstract</h3>
+              
+                      <p>Resource management is critical for application domains where components share their execution environments but belong to different stakeholders, such as smart homes or cloud systems. Yet, current middleware and application containers often hide system-level details needed for dynamic resource management. In particular, they tend to hide resource usage by offering automatic management of these resources (e.g., CPU, memory and I/O). In contrast, system-level containers, such as Linux Containers (LXC), allow fine-grain resource management. However, they lack knowledge about the application’s structure and its requirements in order to provide fine tuned resource management.</p>
+              
+                      <p>In this tutorial, we will expose Squirrel: a new middleware which aims at combining the benefits from the component based software engineering to design flexible and modular application and the system level containers to manage resources. Squirrel follows an approach where developers specify contracts on components and connections to describe the expected behavior of their application regarding resource consumption. These high-level contracts are then used to automatically configure the system-level containers which will hosts the running applications. At the end of this tutorial, applicants will be able to design applications and contracts using Squirrel and run their application inside system level containers to ensure a correct behavior of their application regarding resource consumption.</p>
+              
+                      <h3 id="bio-3">Bio</h3>
+              
+                      <h4 id="johann-bourcier">Johann Bourcier</h4>
+              
+                      <p><img src="../img/bourcier.jpg" alt="Johann Bourcier" class="img-thumbnail pull-left">
+              <a href="https://sites.google.com/site/johannbourcier/">Johann Bourcier</a> is an Associate Professor at the University of Rennes 1, where he is a member of the Triskell INRIA research team. He received his Ph.D. degree in 2008 from the University of Grenoble 1. He is a former member of the LIG Adele research group (Grenoble) and later the Distributed Software Engineering Section in the Department of Computing of Imperial College London. His research interests include the use of software engineering to simplify the development of highly dynamic pervasive applications. Johann Bourcier has co-authored 18 international peer-reviewed conference, journal and book chapters in venue such as TAAS, GECCO, SEAMS, WICSA, SCC, …</p>
+              
+                      <h4 id="inti-gonzalez-herrera">Inti Gonzalez-Herrera</h4>
+              
+                      <p><img src="../img/herrera.png" alt="Inti Gonzalez-Herrera" class="img-thumbnail pull-left">
+              Inti Gonzalez-Herrera is a Ph.D. Student at the University of Rennes 1, where he is a member of the DiverSE INRIA research team. He received his M.Sc. degree in 2010 from the University of Las Villas, Cuba. The topic of his Ph.D. is about providing new mechanisms to guarantee resource reservation in Java-based pervasive middleware. In a broad sense, his research interests include the use of software engineering and system programming to guarantee non-functional properties. Inti Gonzalez-Herrera has co-authored 5 international peer-reviewed conference and workshop papers in the fields of Computer Science and Applied Computing.</p>
+              
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h2>Social</h2>
+                  <a href="https://www.facebook.com/middlewareconf2014">
+                    <img src="../img/fb.png">
+                  </a>
+                  <a href="https://twitter.com/middleware2014">
+                    <img src="../img/twitter.png">
+                  </a>
+                  <h2>News</h2>
+                  <a class="twitter-timeline" data-widget-id="413341448746971136" href="https://twitter.com/middleware2014">Tweets</a>
+                  <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+                  </script>
+                  <h2>Supporters</h2>
+                  <h3>Silver</h3>
+                  <div class="logo">
+                    <a href="http://www.hp.com">
+                      <img class="square img-responsive" src="../img/hp.jpg">
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="http://www.redhat.com/en">
+                      <img class="rect img-responsive" src="../img/redhat.png">
+                    </a>
+                  </div>
+                  <h3>Bronze</h3>
+                  <div class="logo">
+                    <a href="http://www.bbn.com/">
+                      <img class="rect img-responsive" src="../img/bbn.jpg">
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="http://www.ibm.com/">
+                      <img class="rect img-responsive" src="../img/ibm.png">
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="http://www.orange.fr/">
+                      <img class="square img-responsive" src="../img/orange.png">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <span class="footer-title pull-left">Organization:</span>
+        <div class="logo-footer">
+          <a href="http://www.acm.org/">
+            <img class="img-responsive" src="../img/acm.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.ifip.org/">
+            <img class="img-responsive" src="../img/ifip.gif">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="https://www.usenix.org/">
+            <img class="img-responsive" src="../img/usenix.png">
+          </a>
+        </div>
+        <span class="footer-title pull-left">Partners:</span>
+        <div class="logo-footer">
+          <a href="http://www.cnrs.fr/">
+            <img class="img-responsive" src="../img/cnrs.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.aquitaine.fr/">
+            <img class="img-responsive" src="../img/cra.png">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.asr.cnrs.fr/">
+            <img class="img-responsive" src="../img/gdr-asr.png">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.bordeaux.fr/">
+            <img class="img-responsive" src="../img/mairie.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.labri.fr/">
+            <img class="img-responsive" src="../img/labri.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.u-bordeaux.fr/">
+            <img class="img-responsive" src="../img/ub.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.bordeaux-inp.fr/">
+            <img class="img-responsive" src="../img/inp.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://idex.u-bordeaux.fr/">
+            <img class="img-responsive" src="../img/idex.jpg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

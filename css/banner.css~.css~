@@ -1,0 +1,48 @@
+div#header {
+    position: static;
+    z-index:1;
+}
+
+#header {
+    background: #000033 
+    url(/img/header.png) 
+    no-repeat 0px 0px; 
+}
+
+#header {
+    padding: 0;
+    margin: 0;
+    height: 210px;
+    position:relative;
+}
+
+.imgbanner {
+    position: relative !important;
+}
+
+
+.logo4 {
+    font-size: 18px;
+    color: #054B81;
+    line-height: 24px;
+    position: absolute;
+    bottom: 151px;
+    left: 650px;
+}
+
+.logo1, .logo2, .logo3, .logo4, .logo5 {
+    font-family: 'Verdana-Bold', 'Verdana', 'Geneva', sans-serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    line-height: 48px;
+    text-shadow: #666666 1px 1px 4px;
+}
+
+.logo5 {
+    font-size: 18px;
+    color: #FFCC00;
+    line-height: 24px;
+    position: absolute;
+    bottom: 133px;
+    left: 650px;
+}

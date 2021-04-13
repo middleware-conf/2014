@@ -1,0 +1,89 @@
+if (typeof String.prototype.startsWith != 'function') {
+  String.prototype.startsWith = function (str){
+    return this.slice(0, str.length) == str;
+  };
+}
+
+var lblW = ['W1', 'W2', 'W3', 'W4'];
+var lblT = ['T1', 'T2', 'T3', 'T4'];
+var lblE = ['Opening', 'Welcome reception', 'Banquet', 'Closing'];
+var lblK = ['Keynote 1', 'Keynote 2', 'Invited talk'];
+
+$(document).ready(function() {
+	$('#calendar').fullCalendar({
+		defaultDate: '2014-12-08',
+		firstDay: 1,
+		weekends: false,
+		editable: false,
+		minTime: '08:00:00',
+		maxTime: '21:00:00',
+		allDaySlot: false,
+		defaultView: 'agendaWeek',
+		timeFormat: '',
+		header: {
+			left: '',
+			center: '',
+			right: ''
+		},
+		eventRender: function (event, element) {
+			var tooltip = event.description;
+			if (tooltip == '') tooltip = event.title;
+			$(element).attr("data-original-title", tooltip);
+			$(element).tooltip({ container: "body"});
+			if (lblW.indexOf(event.title) != -1) { // for workshops
+				element.css('background-color', 'green');
+			} else if (lblT.indexOf(event.title) != -1) {
+				element.css('background-color', 'orange');
+			} else if (event.title.startsWith("Research session") || event.title == 'Industry session') {
+				element.css('background-color', 'CadetBlue');
+			} else if (event.title == 'DS') {
+				element.css('background-color', 'DarkViolet');
+			} else if (lblK.indexOf(event.title) != -1) {
+				element.css('background-color', 'MediumSlateBlue');
+			} else if (lblE.indexOf(event.title) != -1) {
+				element.css('background-color', 'Crimson');
+			} else if (event.title == 'Poster session') {
+				element.css('background-color', 'PaleVioletRed');
+			} else if (event.title == 'Business meeting') {
+				element.css('background-color', 'Maroon');
+			} else {
+				element.css('background-color', 'gray');
+			}
+		},
+        events: 'https://www.googleapis.com/calendar/v3/calendars/v0gpacc13qv2bfq1o4oqcos9o0@group.calendar.google.com/events?key=AIzaSyDkTwcYanNjg9Ad36LqfwCxILjtEJEAvY0',
+		eventClick: function(event) {
+			console.log(event);
+			switch(event.id) {
+				case 'gm95u7fdkpb3eubl8kr5ugt20s@google.com': // research session 1
+					window.location.hash = '#wednesday-december-10';
+					break;
+				case 'ngvkv2jpged5v0h8p6aiqlo688@google.com': // research session 2
+					window.location.hash = '#wednesday-december-10';
+					break;
+				case '2eg2k7n3r19a7g8njljj15vovk@google.com': // research session 3
+					window.location.hash = '#thursday-december-11';
+					break;
+				case 'tglesee0ek4nje7oiak74i8fpo@google.com': // research session 4
+					window.location.hash = '#thursday-december-11';
+					break;
+				case '2mbh6bgv5783rp8fkt6df6pbjk@google.com': // research session 5
+					window.location.hash = '#thursday-december-11';
+					break;
+				case '2uahsfa6msd1ll2tpr91eh3plk@google.com':
+					window.location.hash = '#thursday-december-11';
+					break;
+				case 'kk8u2htpai9jhnq9temacin200@google.com':
+					window.location.hash = '#friday-december-12';
+					break;
+				case 'qafuc24gojndkch7ruacs73fgg@google.com':
+					window.location.hash = '#friday-december-12';
+					break;
+			}
+			return false;
+		},
+
+		loading: function(bool) {
+			$('#loading').toggle(bool);
+		}
+	});
+});

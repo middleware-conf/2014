@@ -1,0 +1,86 @@
+div#banner {
+    text-align: justify !important;
+    position: static;
+    z-index:1;
+    padding: 0;
+    margin: 0;
+    height: 218px;
+    position: relative !important;
+    border-radius:6px;
+    background: #000033 url(/img/banner.png) no-repeat 0px 0px; 
+    letter-spacing: normal;
+}
+
+.logo1, .logo2, .logo4, .logo5 {
+    font-family: 'Verdana-Bold', 'Verdana', 'Geneva', sans-serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    line-height: 48px;
+    color: #722F37;
+    text-shadow: #722F43 1px 1px 1px;
+}
+
+.logo1 {
+    font-size: 48px;
+    line-height: 60px;
+    margin-left: 185px;
+    display: inline-block;
+}
+
+.logo2 {
+    font-size: 18px;
+    margin-left: 4px;
+    color: #FFCC00;
+    display: inline;
+}
+
+.logo4 {
+    font-size: 18px;
+    line-height: 24px;
+    position: absolute;
+    bottom: 180px;
+    left: 600px;
+
+    box-sizing: border-box;
+    display: block;
+    font-family: Verdana-Bold, Verdana, Geneva, sans-serif;
+    height: 24px;
+}
+
+.logo5 {
+    font-size: 18px;
+    color: #FFCC00;
+    line-height: 24px;
+    position: absolute;
+    bottom: 159px;
+    left: 600px;
+}
+
+
+div#banner p.caption {
+	float: left;
+	background: #101010;
+	filter: alpha(opacity=50);
+	opacity: .50;
+	color: #FFFFFF;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+div#banner p.caption span {
+	float: right;
+	padding: 0px 4px 2px 0px;
+	color: #FFFFFF;
+	font-family: "Lucida Grande","Lucida Sans Unicode", helvetica, verdana, arial, sans-serif;
+	font-size: 9px;
+	line-height: 10px;
+}
+
+div.vspace {
+	height: 50px;
+}
+

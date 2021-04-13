@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="../../bootstrap/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../../custom/banner.css" rel="stylesheet" type="text/css">
+    <link href="../../custom/conf.css" rel="stylesheet" type="text/css">
+    <link href="../../fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css">
+    <script src="../../fullcalendar/lib/moment.min.js" type="text/javascript"></script>
+    <script src="../../fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+    <script src="../../fullcalendar/gcal.js" type="text/javascript"></script>
+    <script src="../../custom/calendar.js" type="text/javascript"></script>
+    <style>
+      #loading {
+      	display: none;
+      	position: absolute;
+      	top: 10px;
+      	right: 10px;
+      }
+      
+      #calendar {
+      	margin: 0 auto;
+      }
+    </style>
+    <style>
+      .dl-horizontal dt { width: 100px; }
+      .dl-horizontal dd { margin-left: 120px; }
+    </style>
+    <title>Middleware 2014</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../">Middleware 2014</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="navbar-nav nav">
+            <li>
+              <a href="../../">Home</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Calls
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../../calls/papers/">Call for papers</a>
+                </li>
+                <li>
+                  <a href="../../calls/industry/">Call for industry short papers</a>
+                </li>
+                <li>
+                  <a href="../../calls/workshops/">Call for workshop proposals</a>
+                </li>
+                <li>
+                  <a href="../../calls/tutorials/">Call for tutorials</a>
+                </li>
+                <li>
+                  <a href="../../calls/demos/">Call for demos and posters</a>
+                </li>
+                <li>
+                  <a href="../../calls/doctoral/">Call for doctoral symposium papers</a>
+                </li>
+                <li>
+                  <a href="../../calls/instructions/">Instructions to authors</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Committees
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../../committees/organization/">Organization committee</a>
+                </li>
+                <li>
+                  <a href="../../committees/program/">Program committee</a>
+                </li>
+                <li>
+                  <a href="../../committees/industry">Industrial track program committee</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../../workshops/">Workshops</a>
+            </li>
+            <li>
+              <a href="../../tutorials/">Tutorials</a>
+            </li>
+            <li>
+              <a href="../../registration/">Registration</a>
+            </li>
+            <li>
+              <a href="../../grants/">Grants</a>
+            </li>
+            <li class="active dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Program
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="./">Program</a>
+                </li>
+                <li class="divider">
+                <li>
+                  <a href="../keynotes/">Keynotes</a>
+                </li>
+                <li>
+                  <a href="../posters/">Posters / Demos</a>
+                </li>
+                <li>
+                  <a href="../doctoral/">Doctoral Symposium</a>
+                </li>
+                <li class="divider">
+                <li>
+                  <a href="../accepted/">Accepted papers</a>
+                  <a href="../awards/">Awards</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Venue
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="../../venue/location/">Conference location</a>
+                </li>
+                <li>
+                  <a href="../../venue/accommodation/">Accommodation</a>
+                </li>
+                <li>
+                  <a href="../../venue/visa/">Visa</a>
+                </li>
+                <li class="divider">
+                <li>
+                  <a href="../../gallery/">Pictures</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <img alt="Bordeaux, place de la bourse" class="img-rounded" height="210px" src="../../img/banner_middleware.png">
+            </div>
+            <div class="col-lg-9">
+              <h1 id="conference-at-a-glance">Conference at a Glance</h1>
+              <div id="calendar"></div>
+              
+              <p>Google Agenda: <a href="https://www.google.com/calendar/feeds/v0gpacc13qv2bfq1o4oqcos9o0%40group.calendar.google.com/public/basic">XML</a> - <a href="https://www.google.com/calendar/ical/v0gpacc13qv2bfq1o4oqcos9o0%40group.calendar.google.com/public/basic.ics">iCal</a> - <a href="https://www.google.com/calendar/embed?src=v0gpacc13qv2bfq1o4oqcos9o0%40group.calendar.google.com&amp;ctz=Europe/Paris">HTML</a></p>
+              
+              <h1 id="program-details">Program Details</h1>
+              
+              <h2 id="pre-conference">Pre-Conference</h2>
+              
+              <h3 id="monday-december-8">Monday, December 8</h3>
+              
+              <dl class="dl-horizontal">
+                <dt>08:15 - 09:00</dt>
+                <dd>Registration</dd>
+                <dt>09:00 - 10:30</dt>
+                <dd>
+<a href="../../tutorials">Tutorial</a> on Tackling Large Scale Event Variety in the Internet of Things</dd>
+                <dt>09:00 - 10:30</dt>
+                <dd>Workshop on Cross Cloud Brokers: Session 1
+              
+                  <ul>
+                    <li>
+<strong>Configuration management as a multi­cloud enabler.</strong> Bart Vanbrabant (<em>KU Leuven</em>), Wouter Joosen (<em>KU Leuven</em>)</li>
+                    <li>
+<strong>SCADAMAR: Scalable and data­efficient Internet MapReduce.</strong> Rodrigo Bruno (<em>INESC ID</em>), Paulo Ferreira (<em>INESC ID / Technical University of Lisbon</em>)</li>
+                    <li>
+<strong>FederatedCloudSim: A SLA­aware federated cloud simulation framework.</strong> Andreas Kohne (<em>Materna GmbH</em>), Marc Spohr (<em>Materna GmbH</em>) and Lars Nagel (<em>Universität Mainz</em>)</li>
+                  </ul>
+                </dd>
+                <dt>09:00 - 10:30</dt>
+                <dd>Workshop on Middleware for Next Generation Internet Computing: Session 1
+              
+                  <ul>
+                    <li>
+<strong>Workshop overview</strong> M. Matos (<em>INESC TEC and U. Minho</em>)</li>
+                    <li>
+<strong>Towards a Model@Runtime Middleware for Cyber Physical Systems.</strong> F. Javier Acosta Padilla (<em>INRIA Rennes</em>), F. Weis, J. Bourcier (<em>IRISA, Université de Rennes 1</em>) </li>
+                    <li>
+<strong>An Architecture for a Smart Spaces Virtual Machine.</strong> L. Freitas (<em>Universidade Federal de Goiás</em>), F. Costa (<em>Universidade Federal de Goiás</em>), R. Rocha (<em>Universidade Federal de Goiás</em>), A. Allen (<em>Georgia Southern University</em>) </li>
+                  </ul>
+                </dd>
+                <dt>10:30 - 11:00</dt>
+                <dd>Break</dd>
+                <dt>11:00 - 12:30</dt>
+                <dd>
+<a href="../../tutorials">Tutorial</a> on Tackling Large Scale Event Variety in the Internet of Things</dd>
+                <dt>11:00 - 12:30</dt>
+                <dd>Workshop on Cross Cloud Brokers: Session 2
+              
+                  <ul>
+                    <li>
+<strong>Adaptive decision making in multi­cloud management.</strong> Faiza Samreen (<em>Lancaster University</em>), Gordon S. Blair (<em>Lancaster University</em>), Matthew Rowe (<em>Lancaster University</em>)</li>
+                    <li>
+<strong>Preference­ based cloud service recommendation as a brokerage service.</strong> Ioannis Patiniotakis (<em>National Technical University of Athens</em>), Yiannis Verginadis (<em>National Technical University of Athens</em>), Gregoris Mentzas (<em>National Technical University of Athens</em>)</li>
+                    <li>
+<strong>Using power measurements as a basis for workload placement in heterogeneous multi­cloud environments.</strong> Mascha Kurpicz (<em>Université de Neuchâtel</em>), Anita Sobe (<em>Université de Neuchâtel</em>), Pascal Felber (<em>Université de Neuchâtel</em>)</li>
+                  </ul>
+                </dd>
+                <dt>09:00 - 10:30</dt>
+                <dd>Workshop on Middleware for Next Generation Internet Computing: Session 2
+              
+                  <ul>
+                    <li>
+<strong>Multi-site Gargamel: Optimistic Synchronization for Reliable Geo-Replicated Databases.</strong> Pierpaolo Cincilla, Sébastien Monnet, Marc Shapiro (<em>Inria and Université Pierre et Marie Curie UPMC - LIP6</em>)</li>
+                    <li>
+<strong>Speculative Client Execution in Deferred Update Replication.</strong> Balaji Arun, Sachin Hirve, Roberto Palmieri, Sebastiano Peluso, and Binoy Ravindran (<em>Virginia Tech</em>)</li>
+                    <li>
+<strong>Geo-Replication with Arbitrary Faults.</strong> Marko Vukolic (<em>Eurecom</em>)</li>
+                  </ul>
+                </dd>
+                <dt>12:30 - 14:00</dt>
+                <dd>Lunch</dd>
+                <dt>14:00 - 17:30</dt>
+                <dd>
+<a href="../../workshops">Workshop</a> on Middleware for Next Generation Internet Computing (full day)</dd>
+                <dt>14:00 - 15:30</dt>
+                <dd>
+<a href="../../tutorials">Tutorial</a> on Designing resource-aware distributed system based on system level containers</dd>
+                <dt>14:00 - 15:30</dt>
+                <dd>Workshop on Cross Cloud Brokers: Session 3
+              
+                  <ul>
+                    <li>
+<strong>Advanced service brokerage capabilities as the catalyst for future cloud service ecosystems.</strong> Anthony Simons (<em>University of Sheffield</em>), Konstantinos Bratanis (<em>South East European Research Centre</em>), Dimitrios Kourtesis (<em>South East European Research Centre</em>), Iraklis Paraskakis (<em>South East European Research Centre</em>), Simeon Veloudis (<em>South East European Research Centre</em>), Yiannis Verginadis (<em>Institute of Communication and Computer Systems</em>), Gregoris Mentzas (<em>Institute of Communication and Computer Systems</em>), Simone Braun (<em>CAS Software AG</em>) and Alessandro Rossini (<em>SINTEF Oslo</em>)</li>
+                    <li><strong>Design sessions on cloud broker architecture</strong></li>
+                  </ul>
+                </dd>
+                <dt>14:00 - 15:30</dt>
+                <dd>Workshop on Middleware for Next Generation Internet Computing: Session 3
+              
+                  <ul>
+                    <li>
+<strong>Keynote: SALTY : A Middleware Toolkit for Building Feedbacks Control Loops.</strong> Romain Rouvoy (<em>University of Lille 1, Inria</em>)</li>
+                  </ul>
+                </dd>
+                <dt>15:30 - 16:00</dt>
+                <dd>Break</dd>
+                <dt>16:00 - 17:30</dt>
+                <dd>
+<a href="../../tutorials">Tutorial</a> on Designing resource-aware distributed system based on system level containers</dd>
+                <dt>16:00 - 17:30</dt>
+                <dd>Workshop Cross Cloud Brokers: Session 4
+              
+                  <ul>
+                    <li><strong>Merge of results and discussion</strong></li>
+                    <li>
+<strong>Invited Talk</strong> N. Janssens (<em>Alcatel-Lucent Bell Labs</em>)</li>
+                  </ul>
+                </dd>
+                <dt>16:00 - 17:30</dt>
+                <dd>Workshop on Middleware for Next Generation Internet Computing: Session 4
+              
+                  <ul>
+                    <li>
+<strong>Towards Efficient and Accurate Privacy Preserving Web Search.</strong> Albin Petit (<em>LIRIS</em>), Sonia Ben Mokhtar (<em>LIRIS</em>), Lionel Brunie (<em>LIRIS</em>), and Harald Kosch (<em>University of Passau</em>)</li>
+                    <li>
+<strong>Moana: A Case for Redefining the Internet Service Abstraction.</strong> Yan Shvartzshnaider (<em>University of Cambridge</em>) and Max Ott (<em>NICTA</em>)</li>
+                    <li>
+<strong>Distributed Event-Based System with Multiscoping for Multiscalability.</strong> Léon Lim (<em>Institut Mines Télécom</em>) and Denis Conan (<em>Institut Mines Télécom</em>)</li>
+                    <li>
+<strong>Workshop wrap-up.</strong> Miguel Matos (<em>INESC TEC and U. Minho</em>)</li>
+                  </ul>
+                </dd>
+              </dl>
+              
+              <p><a href="#conference-at-a-glance">Back to program at a glance</a></p>
+              
+              <h3 id="tuesday-december-9">Tuesday, December 9</h3>
+              
+              <dl class="dl-horizontal">
+                <dt>08:15 - 09:00</dt>
+                <dd>Registration</dd>
+                <dt>09:00 - 10:30</dt>
+                <dd>
+<a href="../doctoral/">Doctoral Symposium</a>
+              
+                  <ul>
+                    <li>
+<strong>Keynote: Lessons learned from 20PhD’s and 40 defenses.</strong>  Wouter Joosen (<em>Minds-DistriNet, KULeuven</em>)</li>
+                    <li>
+<strong>Improving the energy efficiency of software systems for multi-core architectures.</strong> Maxime Colmant (<em>ADEME, University Lille, Inria</em>), Romain Rouvoy (<em>University Lille, Inria</em>), Lionel Seinturier (<em>University Lille, Inria</em>)</li>
+                  </ul>
+                </dd>
+                <dt>09:00 - 10:30</dt>
+                <dd>
+<a href="../../tutorials">Tutorial</a> on Green Big Data Processing using Hadoop: An introductory</dd>
+                <dt>09:00 - 10:30</dt>
+                <dd>Workshop on Adaptive and Reflective Middleware: Session 1
+              
+                  <ul>
+                    <li><strong>Opening Remarks</strong></li>
+                    <li>
+<strong>Cerise: an RDF Store with Adaptive Data Reallocation.</strong> H. Kobashi, N. Carvalho, B. Hu (<em>Fujitsu Laboratories of Europe</em>), T. Saeki (<em>Fujitsu Laboratories Ltd.</em>)</li>
+                    <li>
+<strong>Adaptation for the Masses: Towards Decentralized Adaptation in Large-Scale P2P Recommenders.</strong> D. Frey, AM. Kermarrec (<em>INRIA</em>), C. Maddock, A. Mauthe (<em>Lancaster University</em>), F. Taiani (<em>University of Rennes 1, IRISA</em>)</li>
+                    <li>
+<strong>Bridging the Application Knowledge Gap – Using Ontology-based Situation Recognition to Support Energy-Aware Resource Scheduling.</strong> M. Hahnel, J. Mendez, V. Thost, AY. Turhan (<em>TU Dresden</em>)</li>
+                    <li><strong>Session Panel</strong></li>
+                  </ul>
+                </dd>
+                <dt>10:30 - 11:00</dt>
+                <dd>Break</dd>
+                <dt>11:00 - 12:30</dt>
+                <dd>
+<a href="../doctoral/">Doctoral Symposium</a>
+              
+                  <ul>
+                    <li>
+<strong>A middleware-based approach for QoS-aware deployment of service choreography in the cloud.</strong> Raphael Gomes (<em>Universidade Federal de Goiás, Brazil and INRIA, Paris-Rocquencourt</em>), Fábio Costa (<em>Universidade Federal de Goiás, Brazil</em>), Ricardo da Rocha (<em>Universidade Federal de Goiás, Brazil</em>), Nikolaos Georgantas (<em>INRIA, Paris-Rocquencourt</em>)</li>
+                    <li>
+<strong>Testimony: A PhD Testimonial at completion.</strong> Jef Marien (<em>KULeuven</em>)</li>
+                    <li>
+<strong>Testimony: A PhD Testimonial at half-way.</strong> Ansar Rafique (<em>KULeuven</em>)</li>
+                    <li>
+<strong>Panel: Life after PhD.</strong>  Gordon Blair (<em>Lancaster Unvieristy</em>), Luís Veiga (<em>INESC-ID / Instituto Superior Técnico, ULisboa</em>), and more TBA.</li>
+                  </ul>
+                </dd>
+                <dt>11:00 - 12:30</dt>
+                <dd>
+<a href="../../tutorials">Tutorial</a> on Green Big Data Processing using Hadoop: An introductory</dd>
+                <dt>11:00 - 12:30</dt>
+                <dd>Workshop on Adaptive and Reflective Middleware: Session 2
+              
+                  <ul>
+                    <li>
+<strong>Enabling Component-based Mobile Cloud Computing with the AIOLOS Middleware.</strong> S. Bohez, E. De Coninck, T. Verbelen (<em>Ghent University – iMinds</em>), P. Simoens (<em>Ghent University</em>), B. Dhoedt (<em>Ghent University – iMinds</em>)</li>
+                    <li>
+<strong>Towards a new model for cyber foraging.</strong> D. Lima, H. Miranda (<em>Universidade de Lisboa</em>), F. Taiani (<em>University of Rennes 1, IRISA</em>)</li>
+                    <li>
+<strong>Middleware for Reflective Web Service Choreographies on the Cloud.</strong> T. Furtado (<em>University of São Paulo</em>), E. Francesquini (<em>University of Campinas</em>), N. Lago, F. Kon (<em>University of São Paulo</em>)</li>
+                    <li><strong>Session Panel</strong></li>
+                  </ul>
+                </dd>
+                <dt>12:30 - 14:00</dt>
+                <dd>Lunch</dd>
+                <dt>14:00 - 15:30</dt>
+                <dd>
+<a href="../../tutorials">Tutorial</a> on Coccinelle for the Working Programmer</dd>
+                <dt>14:00 - 15:30</dt>
+                <dd>Workshop on Adaptive and Reflective Middleware: Session 3
+              
+                  <ul>
+                    <li>
+<strong>A Middleware for Managing Dynamic Software Adaptation.</strong> R. Oliveira Vasconcelos, I. Vasconcelos, M. Endler (<em>Pontifical Catholic University of Rio de Janeiro – PUC-Rio</em>)</li>
+                    <li>
+<strong>Analyzing Impacts of Adaptations on Cost, Risk, and Quality – An Experience Report.</strong> A. Garcha Singh (<em>University of Oslo</em>), A. Omerovic, F. Chauvel, N. Ferry (<em>SINTEF</em>)</li>
+                    <li>
+<strong>SNOOP: Privacy preserving middleware for secure multi-party computations.</strong> A. Andersen (<em>UiT The Arctic University of Norway</em>)</li>
+                    <li><strong>Session Panel</strong></li>
+                  </ul>
+                </dd>
+                <dt>14:00 - 15:30</dt>
+                <dd>Workshop on Middleware for Context-Aware Applications in the IoT: Session 1
+              
+                  <ul>
+                    <li><strong>Introduction and Welcome</strong></li>
+                    <li>
+<strong>Keynote: Towards Middleware for IoT:	Challenges and Capabilities.</strong> Thais	Batista (<em>Federal University of Rio Grande do Norte</em>)</li>
+                    <li>
+<strong>Taming the Interoperability Challenges of Complex IoT Systems.</strong> Paul Grace, Justan Barbosa, Brian Pickering, Mike Surridge (<em>United Kingdom, IT Innovation, University of Southampton</em>)</li>
+                    <li>
+<strong>Enabling resource sharing in heterogeneous Wireless Sensor Networks.</strong> Jef Maerien, Sam Michiels, Christophe Huygens, Danny Hughes, Wouter Joosen (<em>iMinds-DistriNet, KU Leuven</em>)</li>
+                  </ul>
+                </dd>
+                <dt>15:30 - 16:00</dt>
+                <dd>Break</dd>
+                <dt>16:00 - 17:30</dt>
+                <dd>
+<a href="../../tutorials">Tutorial</a> on Coccinelle for the Working Programmer</dd>
+                <dt>16:00 - 17:30</dt>
+                <dd>Workshop on Adaptive and Reflective Middleware: Session 4
+              
+                  <ul>
+                    <li><strong>Wrap up Session</strong></li>
+                  </ul>
+                </dd>
+                <dt>16:00 - 17:30</dt>
+                <dd>Workshop on Middleware for Context-Aware Applications in the IoT: Session 2
+              
+                  <ul>
+                    <li>
+<strong>QoC-Aware Context Data Distribution in the Internet of Things.</strong>, Pierrick Marie (<em>IRIT, Université Paul Sabatier</em>), Léon Lim, Atif Manzoor, Sophie Chabridon, Denis Conan (<em>Institut Mines-Télécom, Télécom SudParis</em>), Thierry Desprats (<em>IRIT, Université Paul Sabatier</em>)</li>
+                    <li>
+<strong>Mood-Fatigue Analyzer: 	Towards Context-aware Mobile Sensing Applications for Safe Driving.</strong> Wenyan Hu (<em>Nankai University</em>), Xiping Hu (<em>University of British Columbia</em>), Junqi Deng (University of Hong Kong), Chunsheng Zhu (<em>University of British Columbia</em>), Edith C. H. Ngai (<em>Uppsala University</em>), Victor C. M. Leung (<em>University of British Columbia</em>)</li>
+                    <li>
+<strong>Kali2Much: A context middleware for autonomic adaptation-driven platform.</strong> Keling Da, Philippe Roose, Marc Dalmau and Joseba Novado (<em>IUT de Bayonne, University of Pau</em>)</li>
+                    <li><strong>Discussion and Reflection</strong></li>
+                    <li><strong>Closing Remarks</strong></li>
+                  </ul>
+                </dd>
+              </dl>
+              
+              <p><a href="#conference-at-a-glance">Back to program at a glance</a></p>
+              
+              <h2 id="conference">Conference</h2>
+              
+              <h3 id="wednesday-december-10">Wednesday, December 10</h3>
+              
+              <dl class="dl-horizontal">
+                <dt>08:00 - 08:45</dt>
+                <dd>Registration</dd>
+                <dt>08:45 - 09:00</dt>
+                <dd>Opening</dd>
+                <dt>09:00 - 10:00</dt>
+                <dd>
+<a href="../keynotes">Keynote 1</a>: Towards Data Center Systems (Edouard Bugnion)</dd>
+                <dt>10:00 - 10:30</dt>
+                <dd>Break</dd>
+                <dt>10:30 - 12:35</dt>
+                <dd>Research session 1 (5 papers): Middleware for Emerging Cloud Computing
+              
+                  <ul>
+                    <li>
+<strong>Tiera: Towards Flexible Multi-Tiered Cloud Storage Instances.</strong>
+              Ajaykrishna Raghavan (<em>University of Minnesota Twin Cities</em>), Abhishek Chandra (<em>University of Minnesota Twin Cities</em>), Jon Weissman (<em>University of Minnesota Twin Cities</em>)</li>
+                    <li>
+<strong>G-DUR: A Middleware for Assembling, Analyzing, and Improving Transactional Protocols.</strong>
+                Masoud Saeida Ardekani (<em>INRIA &amp; Université Pierre et Marie Curie &amp; LIP6</em>), Pierre Sutra (<em>University of Neuchâtel</em>), Marc Shapiro (<em>INRIA &amp; Université Pierre et Marie Curie &amp; LIP6</em>)</li>
+                    <li>
+<strong>LVD: Lean Virtual Disks.</strong> Gaurab Basu (<em>IBM Research India</em>), Shripad Nadgowda (<em>IBM Research India</em>), Akshat Verma (<em>IBM Research India</em>)</li>
+                    <li>
+<strong>Trustworthy Geographically Fenced Hybrid Clouds.</strong>
+              K. R. Jayaram (<em>IBM Research, TJ Watson Research Center</em>), David Safford (<em>IBM Research, TJ Watson Research Center</em>), Upendra Sharma (<em>IBM Research, TJ Watson Research Center</em>), Vijay Naik (<em>IBM Research, TJ Watson Research Center</em>), Dimitrios Pendarakis (<em>IBM Research, TJ Watson Research Center</em>), Shu Tao (<em>IBM Research, TJ Watson Research Center</em>)</li>
+                    <li>
+<strong>StackSync: Bringing Elasticity to Dropbox-like File Synchronization.</strong>
+              Pedro Garcia Lopez (<em>Universitat Rovira i Virgili</em>), Sergi Toda (<em>Universitat Rovira i Virgili</em>), Cristian Cotes (<em>Universitat Rovira i Virgili</em>), Marc Sanchez-Artigas (<em>Universitat Rovira i Virgili</em>), John Lenton (<em>Canonical</em>)</li>
+                  </ul>
+                </dd>
+                <dt>12:35 - 14:00</dt>
+                <dd>Lunch</dd>
+                <dt>14:00 - 16:05</dt>
+                <dd>Research Session 2 (5 papers): Middleware for Data-Intensive Computing
+              
+                  <ul>
+                    <li>
+<strong>Slider: Incremental Sliding Window Analytics.</strong>
+              Pramod Bhatotia (<em>MPI-SWS</em>), Umut Acar (<em>Carnegie Mellon University</em>), Flavio Junqueira (<em>Microsoft Research Cambridge</em>), Rodrigo Rodrigues (<em>Universidade Nova de Lisboa</em>)</li>
+                    <li>
+<strong>Fast, Expressive Top-k Matching.</strong>
+              William Culhane (<em>Purdue University</em>), K. R. Jayaram (<em>IBM Research</em>), Patrick Eugster (<em>Purdue University</em>)</li>
+                    <li>
+<strong>HyRec: Leveraging browsers for scalable recommenders.</strong>
+                Antoine Boutet (<em>INRIA Rennes</em>),  Davide Frey (<em>INRIA Rennes</em>), Rachid Guerraoui (<em>EPFL</em>), Anne-Marie Kermarrec (<em>INRIA Rennes</em>), Rhicheek Patra (<em>EPFL</em>)</li>
+                    <li>
+<strong>Improving MapReduce Performance in Heterogeneous Environments with Adaptive Task Tuning.</strong>
+                Dazhao Cheng (<em>University of Colorado at Colorado Springs</em>), Jia Rao (<em>University of Colorado at Colorado Springs</em>), Yanfei Guo (<em>University of Colorado at Colorado Springs</em>), Xiaobo Zhou (<em>University of Colorado at Colorado Springs</em>)</li>
+                    <li>
+<strong>Thematic Event Processing.</strong>
+              Souleiman Hasan (<em>National University of Ireland</em>), Edward Curry (<em>National University of Ireland</em>)</li>
+                  </ul>
+                </dd>
+                <dt>16:05 - 17:15</dt>
+                <dd>Break &amp; Poster session</dd>
+                <dt>17:15 - 18:00</dt>
+                <dd>Business meeting</dd>
+                <dt>18:15 - 21:00</dt>
+                <dd>Welcome reception at city hall</dd>
+              </dl>
+              
+              <p><a href="#conference-at-a-glance">Back to program at a glance</a></p>
+              
+              <h3 id="thursday-december-11">Thursday, December 11</h3>
+              
+              <dl class="dl-horizontal">
+                <dt>08:00 - 08:30</dt>
+                <dd>Registration</dd>
+                <dt>08:30 - 09:30</dt>
+                <dd>
+<a href="../keynotes">Keynote 2</a>: The Software-Defined Building: A Machine for Living (Randy Katz)</dd>
+                <dt>09:40 - 10:30</dt>
+                <dd>Research Session 3 (2 papers): Reliability and Fault-Tolerance 1
+              
+                  <ul>
+                    <li>
+<strong>Affinity-Aware Checkpoint Restart.</strong>
+              Ajay Saini (<em>NCSU</em>), Arash Rezaei (<em>NCSU</em>), Frank Mueller (<em>NCSU</em>), Paul Hargrove (<em>Lawrence Berkeley National Laboratory</em>), Eric Roman (<em>Lawrence Berkeley National Laboratory</em>)</li>
+                    <li>
+<strong>Mutable Checkpoint-Restart: Automating Live Update for Generic Server Programs.</strong>
+              Cristiano Giuffrida (<em>VU University Amsterdam</em>), Calin Iorgulescu (<em>EPFL</em>), Andrew S. Tanenbaum (<em>VU University Amsterdam</em>)</li>
+                  </ul>
+                </dd>
+                <dt>10:30 - 11:00</dt>
+                <dd>Break</dd>
+                <dt>11:00 - 12:40</dt>
+                <dd>Research Session 4 (4 papers): Consistency and Scalability
+              
+                  <ul>
+                    <li>
+<strong>Consensus Inside.</strong> Tudor David (<em>EPFL</em>), Rachid Guerraoui (<em>EPFL</em>), Maysam Yabandeh (<em>Twitter</em>)</li>
+                    <li>
+<strong>A Framework for the Dynamic Evolution of Highly-Available Dataflow Programs.</strong> Sebastian Ertel (<em>Technische Universität Dresden</em>), Pascal Felber (<em>Université de Neuchâtel</em>)</li>
+                    <li>
+<strong>Building global and scalable systems with Atomic Multicast.</strong> Samuel Benz (<em>Università della Svizzera italiana</em>), Parisa Jalili Marandi (<em>Università della Svizzera italiana</em>), Fernando Pedone (<em>Università della Svizzera italiana</em>), Benoit Garbinato (<em>University of Lausanne</em>)</li>
+                    <li>
+<strong>Strong Consistency in Cache Augmented SQL Systems.</strong> Shahram Ghandeharizadeh (<em>USC</em>), Jason Yap (<em>USC</em>), Hieu Nguyen (<em>USC</em>)</li>
+                  </ul>
+                </dd>
+                <dt>12:40 - 14:00</dt>
+                <dd>Lunch</dd>
+                <dt>14:00 - 16:05</dt>
+                <dd>Research Session 5 (5 papers) : Middleware for Mobile Devices and Ubiquitous Computing (Publish-Subscribe)
+              
+                  <ul>
+                    <li>
+<strong>SOUP: An Online Social Network By The People, For The People.</strong>
+                David Koll (<em>University of Goettinge</em>), Jun Li (<em>University of Oregon</em>), Xiaoming Fu (<em>University of Goettingen</em>)</li>
+                    <li>
+<strong>SenSocial: A Middleware for Integrating Online Social Networks and Mobile Sensing Data Streams.</strong>
+              Abhinav Mehrotra (<em>University of Birmingham</em>), Veljko Pejovic (<em>University of Birmingham</em>), Mirco Musolesi (<em>University of Birmingham</em>)</li>
+                    <li>
+<strong>PLEROMA: A SDN-based High Performance Publish/Subscribe Middleware.</strong>
+                Muhammad Adnan Tariq (<em>University of Stuttgart</em>), Boris Koldehofe (<em>University Of Stuttgart</em>), Sukanya Bhowmik (<em>University Of Stuttgart</em>), Kurt Rothermel (<em>University Of Stuttgart</em>)</li>
+                    <li>
+<strong>CrowdWiFi: Efficient Crowdsensing of Roadside WiFi Networks.</strong>
+                Di Wu (<em>Imperial College London</em>), Qiang Liu (<em>University of California Irvine</em>), Yuan Zhang (<em>University of California Irvine</em>), Julie McCann (<em>Imperial College London</em>), Amelia Regan (<em>University of California Irvine</em>), Nalini Venkatasubramanian (<em>University of California Irvine</em>)</li>
+                    <li>
+<strong>Publish/Subscribe Network Designs for Multiplayer Games.</strong>
+                Cesar Canas (<em>McGill University</em>), Kaiwen Zhang (<em>University of Toronto</em>), Bettina Kemme (<em>McGill University</em>), Jorg Kienzle (<em>McGill University</em>), Hans-Arno Jacobsen (<em>University of Toronto</em>)</li>
+                  </ul>
+                </dd>
+                <dt>16:05 - 16:30</dt>
+                <dd>Break</dd>
+                <dt>16:30 - 17:50</dt>
+                <dd>Industry Session (5 papers)
+              
+                  <ul>
+                    <li>
+<strong>The X-Flex Cross-Platform Scheduler: Who’s The Fairest Of Them All?</strong>
+                Joel Wolf (<em>IBM Research</em>), Zubair Nabi (<em>IBM Research</em>), Viswanath Nagarajan (<em>University of Michigan</em>), Robert Saccone (<em>IBM Research</em>), Rohit Wagle (<em>IBM Research</em>), Kirsten Hildrum (<em>IBM Research</em>), Edward Pring (<em>IBM Research</em>), Kanthi Sarpatwar (<em>University of Maryland</em>)</li>
+                    <li>
+<strong>Virtual GPS: A Middleware for Power Efficient Localization of Smartphones Using Cross Layer Approach.</strong>
+                Sravan Kumar Thokala (<em>Qualcomm and University Of Colorado, Boulder</em>), Pranav Koundinya (<em>University of Houston</em>), Shivakant Mishra (<em>University Of Colorado, Boulder</em>), Larry Shi (<em>University of Houston</em>)</li>
+                    <li>
+<strong>PMWare: A Middleware for Discovering and Managing Places of Human Interest.</strong>
+                Kuldeep Yadav (<em>Xerox Research Centre</em>), Abhishek Kumar (<em>Xerox Research Centre</em>), Prateek Jassal (<em>EMC Corporation</em>), Vinayak Naik (<em>IIIT-Delhi</em>)</li>
+                    <li>
+<strong>Scheduling Online Repartitioning in OLTP Systems.</strong>
+                Kaiji Chen (<em>University of Southern Denmark</em>), Yongluan Zhou (<em>University of Southern Denmark</em>), Yu Cao (<em>EMC Labs China</em>)</li>
+                    <li>
+<strong>Improving Readiness for Enterprise Migration to the Cloud.</strong>
+                Jill Jermyn (<em>Columbia University</em>), Jinho Hwang (<em>IBM T.J. Watson Research Center</em>), Kun Bai (<em>IBM T.J. Watson Research Center</em>), Maja Vukovic (<em>IBM T.J. Watson Research Center</em>), Nikos Anerousis (<em>IBM T.J. Watson Research Center</em>), Salvatore Stolfo (<em>Columbia University</em>)</li>
+                  </ul>
+                </dd>
+                <dt>18:30 - 23:30</dt>
+                <dd>Social event &amp; Banquet</dd>
+              </dl>
+              
+              <p><a href="#conference-at-a-glance">Back to program at a glance</a></p>
+              
+              <h3 id="friday-december-12">Friday, December 12</h3>
+              
+              <dl class="dl-horizontal">
+                <dt>08:30 - 09:00</dt>
+                <dd>Registration</dd>
+                <dt>09:00 - 09:30</dt>
+                <dd>10 years best paper &amp; invited talk</dd>
+                <dt>09:40 - 10:30</dt>
+                <dd>Research Session 6 (2 papers): Reliability and Fault-Tolerance 2
+              
+                  <ul>
+                    <li>
+<strong>Stage-Aware Anomaly Detection through Tracking Log Points.</strong>
+                Saeed Ghanbari (<em>University of Toronto</em>), Ali B. Hashemi (<em>University of Toronto</em>), Cristiana Amza (<em>University of Toronto</em>)</li>
+                    <li>
+<strong>Archie: A Speculative Replicated Transactional System.</strong>
+                Sachin Hirve (<em>Virginia Tech</em>), Roberto Palmieri (<em>Virginia Tech</em>), Binoy Ravindran (<em>Virginia Tech</em>)</li>
+                  </ul>
+                </dd>
+                <dt>10:30 - 11:00</dt>
+                <dd>Break</dd>
+                <dt>11:00 - 12:40</dt>
+                <dd>Research Session 7 (4 papers): Performance
+              
+                  <ul>
+                    <li>
+<strong>Mitigating Interference in Cloud Services by Middleware Reconfiguration.</strong>
+                Amiya Maji (<em>Purdue University</em>), Subrata Mitra (<em>Purdue University</em>), Bowen Zhou (<em>Purdue University</em>), Saurabh Bagchi (<em>Purdue University</em>), Akshat Verma (<em>IBM Research India</em>)</li>
+                    <li>
+<strong>CAMP: A Cost Adaptive Multi-Queue Eviction Policy for Key-Value Stores.</strong>
+                Shahram Ghandeharizadeh (<em>USC</em>), Sandy Irani (<em>UCI</em>), Jenny Lam (<em>UCI</em>), Jason Yap (<em>USC</em>)</li>
+                    <li>
+<strong>Stay-Away, protecting sensitive applications from performance interference.</strong>
+                Navaneeth Rameshan (<em>UPC</em>), Leandro Navarro (<em>UPC</em>), Enric Monte (<em>UPC</em>), Vladimir Vlassov (<em>KTH</em>)</li>
+                    <li>
+<strong>Virtual Machine Consolidation in the Wild.</strong>
+                Akshat Verma (<em>IBM Research India</em>), Juhi Bagrodia (<em>IIT</em>), Vimmi Jaiswal (<em>JIMS</em>)</li>
+                  </ul>
+                </dd>
+                <dt>12:40 - 12:45</dt>
+                <dd>Closing</dd>
+              </dl>
+              
+              <p><a href="#conference-at-a-glance">Back to program at a glance</a></p>
+            </div>
+            <div class="col-lg-3">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h2>Social</h2>
+                  <a href="https://www.facebook.com/middlewareconf2014">
+                    <img src="../../img/fb.png">
+                  </a>
+                  <a href="https://twitter.com/middleware2014">
+                    <img src="../../img/twitter.png">
+                  </a>
+                  <h2>News</h2>
+                  <a class="twitter-timeline" data-widget-id="413341448746971136" href="https://twitter.com/middleware2014">Tweets</a>
+                  <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+                  </script>
+                  <h2>Supporters</h2>
+                  <h3>Silver</h3>
+                  <div class="logo">
+                    <a href="http://www.hp.com">
+                      <img class="square img-responsive" src="../../img/hp.jpg">
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="http://www.redhat.com/en">
+                      <img class="rect img-responsive" src="../../img/redhat.png">
+                    </a>
+                  </div>
+                  <h3>Bronze</h3>
+                  <div class="logo">
+                    <a href="http://www.bbn.com/">
+                      <img class="rect img-responsive" src="../../img/bbn.jpg">
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="http://www.ibm.com/">
+                      <img class="rect img-responsive" src="../../img/ibm.png">
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="http://www.orange.fr/">
+                      <img class="square img-responsive" src="../../img/orange.png">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <span class="footer-title pull-left">Organization:</span>
+        <div class="logo-footer">
+          <a href="http://www.acm.org/">
+            <img class="img-responsive" src="../../img/acm.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.ifip.org/">
+            <img class="img-responsive" src="../../img/ifip.gif">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="https://www.usenix.org/">
+            <img class="img-responsive" src="../../img/usenix.png">
+          </a>
+        </div>
+        <span class="footer-title pull-left">Partners:</span>
+        <div class="logo-footer">
+          <a href="http://www.cnrs.fr/">
+            <img class="img-responsive" src="../../img/cnrs.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.aquitaine.fr/">
+            <img class="img-responsive" src="../../img/cra.png">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.asr.cnrs.fr/">
+            <img class="img-responsive" src="../../img/gdr-asr.png">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.bordeaux.fr/">
+            <img class="img-responsive" src="../../img/mairie.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.labri.fr/">
+            <img class="img-responsive" src="../../img/labri.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.u-bordeaux.fr/">
+            <img class="img-responsive" src="../../img/ub.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://www.bordeaux-inp.fr/">
+            <img class="img-responsive" src="../../img/inp.jpg">
+          </a>
+        </div>
+        <div class="logo-footer">
+          <a href="http://idex.u-bordeaux.fr/">
+            <img class="img-responsive" src="../../img/idex.jpg">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
